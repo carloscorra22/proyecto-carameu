@@ -1,0 +1,83 @@
+*{
+    margin: o;
+    padding: o;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: white;
+    
+}
+
+a{
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+img, svg{
+    vertical-align: middle;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1320px;
+    
+}
+
+.nav__box{
+    background-color : black;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.icon{
+    width: 16px;
+    height: 16px;
+    margin: 0.5rem;
+}
+
+.logo{
+    margin: auto;
+    width: auto;
+}
+.logo__img{
+    width: 25%;
+    margin: 0 35%;
+}
+
+.nav__list{
+    list-style: none;
+}
+
+.nav__item{
+    margin: 0.5rem;
+    color: black;
+
+}
+
+.display{
+    size: 8rem;
+}
+
+.col {
+    width: 100%;
+}
+
+.productos__img{
+    width: 15rem;
+    height: 15rem;
+}
+
+/*pie de pagina*/
+
+.pieDePagina{
+    background-color: black;
+    color: whitesmoke;
+}
