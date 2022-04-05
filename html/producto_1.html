@@ -4,36 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Producto</title>
     
 </head>
-<body>
+<body id="grid__producto">
     <header>
-        <ul>
-            <li>facebook <img src="iconos/facebook.png" alt="logo de facebook"></li>
-            <li>instagram <img src="iconos/instagram.png" alt="logo de instagram"></li>
-            <li>mail <img src="iconos/sobre.png" alt="logo de sobre"></li>
-        </ul>
-        <a href="index.html"><div><img src="imagenes/logo carameu.jpg" alt="logo de carameu"></div></a>
-        <nav></nav>
-        <label for="producto">producto</label>
+        <div class="nav">
+                <ul class="nav__list nav__flex">
+                    <li class="nav__item">facebook <img src="iconos/facebook.png" alt="logo de facebook" class="icon"></li>
+                    <li class="nav__item">instagram <img src="iconos/instagram.png" alt="logo de instagram" class="icon"></li>
+                    <li class="nav__item">mail <img src="iconos/sobre.png" alt="logo de sobre" class="icon"></li>
+                </ul>                
+        </div>
+
+    <a href="index.html" ><div class="logo"><img src="imagenes/logo carameu.jpg" alt="logo de carameu" class="logo__img"></div></a>
     </header>
-    <div>
-    <tr>
-        <th><a href="index.html">inicio</a></th>
-        <th><a href="contacto.html">contacto</a></th>
-        <th><a href="log in.html">login</a></th>
-        <th><a href="carrito">carrito</a></th>  
-    </tr>
-    </div>
+    <section id="nav"class="nav__box">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav__list nav__flex">
+                    <li class="nav__item border"><a href="index.html">inicio</a></li>
+                    <li class="nav__item border"><a href="contacto.html">contacto</a></li>
+                    <li class="nav__item border"><a href="log in.html">login</a></li>
+                    <li class="nav__item border"><a href="carrito">carrito</a></li>
+                    <li class="nav__item border"><a href="#productos">productos</a></li>
+                    <li class="nav__item border"><a href="quienes somos.html">quienes somos</a></li>
+                    <li class="nav__item border"><a href="#consejos">consejos</a></li>
+                </ul>
+            </nav>
+        </div>       
+    </section>
+    
     <br/>
     <br/>
-    <div>
-    <img src="imagenes/producto1.jpg" alt="miniatura en forma de corazon, flor y pluma de plata">
-    </div>
-    <div>
-        <label for="miniatura de plata">miniatura de plata</label>
-        
-    </div>
+        <div class="producto">
+            <div>
+                <img src="imagenes/anillo_corazon.jpeg" alt="anillo en forma de corazon" class="img__producto">    
+            </div>
+            <div> 
+                <div class="producto__texto">
+                     <label for="anillo_corazon" class="producto__compra">anillo corazon</label>
+                    <br/>
+                    <br/>
+                    <label for="precio" class="producto__compra">$4500</label>
+                    <br/>
+                    <br/>
+                    <label for="talles" class="producto__compra">talles</label>
+
+               
+                </div>
+                    <form action="">        
+                    <select name="talles" id="talles">
+                        <option value="16mm">16mm</option>
+                        <option value="17mm">17mm</option>
+                        <option value="18mm">18mm</option>
+                        <option value="19mm">19mm</option>
+                    </select>
+                    </form>
+
+                    <form action="">
+                        <fieldset class="fielset">
+                            <legend>cantidad</legend>
+                            <br/>
+                            <input type="text">
+                        </fieldset>
+                    </form>
+                    <br/>
+                    <input type="sumit" value="agrgar al carrito">
+                    in
+
+            </div>
+
+        </div>
+
+    <section class="pieDePagina" id="pie">
+        <footer id="pie"></footer>
+        <!-- pie de pagina -->
+        <section class="pieDePagina"></section>
+        copyright 2022 
+    </section>
 </body>
 </html>

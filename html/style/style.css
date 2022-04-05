@@ -48,17 +48,19 @@ img, svg{
 
 .container{
     width: 80%;
-    margin: 0 auto;
+    margin:  0 auto;
     max-width: 1320px;
+    padding-top: 2%;
+    padding-bottom: 2%;
 
 }
 
 .nav__box{
     background-color : black;
-    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1;
+    height: 60px;
 }
 
 .icon{
@@ -83,12 +85,11 @@ img, svg{
 
 .banner__ofertas{
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
 .nav__list{
     list-style: none;
-    list-style-image: none;
 }
 
 .nav__item{
@@ -111,8 +112,8 @@ img, svg{
 }
 
 .consejos{
-display: flex;
-flex-direction: row;
+display: grid;
+grid-template-columns: 50%;
 justify-content: center;
 max-width: 100%;
 }
@@ -122,4 +123,98 @@ max-width: 100%;
 .pieDePagina{
     background-color: black;
     color: whitesmoke;
+}
+
+.fieldset{
+    list-style: none;
+}
+
+.border{
+    border: solid 2px;
+    border-color: black;
+
+}
+
+/*contactos*/
+
+#grid__contacto{
+    display: grid;
+    grid-template-areas: 
+    header header header
+    nav nav nav
+    contacto contacto contacto
+    contacto contacto contacto
+    pie pie pie;
+}
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.campos{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+/*login*/
+
+#grid__login{
+    display: grid;
+    grid-template-areas:
+    header header header
+    nav nav nav
+    login login login
+    campo campo campo
+    campo campo campo
+    pie pie pie
+    ;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding-top: 2%;
+}
+
+/*productos*/
+
+#grid__producto{
+    display: grid;
+    grid-template-areas: 
+    header header header
+    nav nav nav
+    producto producto producto
+    producto producto producto
+    pie pie pie;
+}
+
+.img__procto{
+    max-width: 100%;
+    height: 500px;
+
+}
+
+.producto__compra{
+    font-size : 50px;
+}
+
+.producto__texto{
+    display: flex;
+    justify-content: right space-between;
+    align-items: inherit;
+    flex-direction: column;
+
+}
+
+.producto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
 }

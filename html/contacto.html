@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>contacto</title>
 </head>
-<body>
+<body id="grid__contacto">
     <header>
-        <ul>
-            <li>facebook <img src="iconos/facebook.png" alt="logo de facebook"></li>
-            <li>instagram <img src="iconos/instagram.png" alt="logo de instagram"></li>
-            <li>mail <img src="iconos/sobre.png" alt="logo de sobre"></li>
-        </ul>
-        <a href="index.html"><div><img src="imagenes/logo carameu.jpg" alt="logo de carameu"></div></a>
-        <nav></nav>
+        <div class="nav">
+            <ul class="nav__flex">
+                <li class="nav__item">facebook <img src="iconos/facebook.png" alt="logo de facebook" class="icon"></li>
+                <li class="nav__item">instagram <img src="iconos/instagram.png" alt="logo de instagram" class="icon"></li>
+                <li class="nav__item">mail <img src="iconos/sobre.png" alt="logo de sobre" class="icon"></li>
+            </ul>            
+        </div>
+        <a href="index.html"><div class="logo"><img src="imagenes/logo carameu.jpg" alt="logo de carameu" class="logo__img"></div></a>
     </header>
-    <label for="contacto">contacto</label>
-    <table cellspacing="10">
-        <tr>
-            <th><a href="index.html">inicio</a></th>
-            <th><a href="contacto.html">contacto</a></th>
-            <th><a href="log in.html">login</a></th>
-            <th><a href="carrito">carrito</a></th>  
-        </tr>
-    </table>
+   
+    <section id="nav"class="nav__box">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav__list nav__flex">
+                    <li class="nav__item border"><a href="index.html">inicio</a></li>
+                    <li class="nav__item border"><a href="contacto.html">contacto</a></li>
+                    <li class="nav__item border"><a href="log in.html">login</a></li>
+                    <li class="nav__item border"><a href="carrito">carrito</a></li>
+                    <li class="nav__item border"><a href="#productos">productos</a></li>
+                    <li class="nav__item border"><a href="quienes somos.html">quienes somos</a></li>
+                    <li class="nav__item border"><a href="#consejos">consejos</a></li>
+                </ul>
+            </nav>
+        </div>       
+    </section> 
+    <label for="contacto" class="contacto">contacto</label>
     <form action="">
-        <fieldset>
+        <fieldset class="campos">
             <label for="nombre">nombre:</label>
         <br />
             <input type="text">
@@ -48,5 +58,12 @@
         
 </fieldset>
         </form>
+
+    <section class="pieDePagina" id="pie">
+        <footer id="pie"></footer>
+        <!-- pie de pagina -->
+        <section class="pieDePagina"></section>
+        copyright 2022 
+    </section>        
 </body>
 </html>
