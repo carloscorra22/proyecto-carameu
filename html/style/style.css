@@ -7,7 +7,16 @@
 body{
     font-family: sans-serif;
     background-color: white;
-    
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "ofertas "
+    "productos"
+    "consejos"
+    "pie";
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
 }
 
 a{
@@ -22,18 +31,30 @@ img, svg{
     vertical-align: middle;
 }
 
-#grid{
-    display: grid;
-    grid-template-areas: 
-    header header header
-    nav nav nav
-    ofertas ofertas ofertas
-    productos productos productos
-    productos productos productos
-    consejos consejos consejos
-    consejos consejos consejos
-    pie pie pie;
+header{
+    grid-area: header;
 }
+
+.nav{
+    grid-area: nav;
+}
+
+section#ofertas{
+    grid-area: ofertas;
+}
+
+section#productos{
+    grid-area: productos;
+}
+
+section#consejos{
+    grid-area: consejos;
+}
+
+section#pie{
+    grid-area: pie;
+}
+
 .productos__grid{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -90,12 +111,12 @@ img, svg{
 
 .nav__list{
     list-style: none;
+
 }
 
 .nav__item{
     margin: 0.5rem;
     color: black;
-
 }
 
 .display{
@@ -111,7 +132,7 @@ img, svg{
     height: 15rem;
 }
 
-.consejos{
+.consejos_grid{
 display: grid;
 grid-template-columns: 50%;
 justify-content: center;
@@ -140,13 +161,16 @@ max-width: 100%;
 #grid__contacto{
     display: grid;
     grid-template-areas: 
-    header header header
-    nav nav nav
-    contacto contacto contacto
-    contacto contacto contacto
-    pie pie pie;
+    "header header header"
+    "nav nav nav"
+    "contacto contacto contacto"
+    "pie pie pie";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
-
+section#contacto{
+    grid-area: contacto;
+}
 .contacto{
     display: flex;
     justify-content: center;
@@ -154,11 +178,14 @@ max-width: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
-.campos{
+.videos{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto;
-    justify-content: center;
+}
+
+.video__center{
+    justify-self: center;
 }
 
 /*login*/
@@ -166,15 +193,26 @@ max-width: 100%;
 #grid__login{
     display: grid;
     grid-template-areas:
-    header header header
-    nav nav nav
-    login login login
-    campo campo campo
-    campo campo campo
-    pie pie pie
+    "header header header"
+    "nav nav nav"
+    "campos campos campos"
+    "pie pie pie"
     ;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
 }
-
+section#login{
+    grid-area: login;
+}
+section#campos{
+    grid-area: campos;
+}
+.campos{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+}
 .login{
     display: flex;
     justify-content: center;
@@ -182,16 +220,21 @@ max-width: 100%;
     padding-top: 2%;
 }
 
-/*productos*/
+/*productos_compra*/
 
 #grid__producto{
     display: grid;
     grid-template-areas: 
-    header header header
-    nav nav nav
-    producto producto producto
-    producto producto producto
-    pie pie pie;
+    "header header header"
+    "nav nav nav"
+    "producto producto producto"
+    "pie pie pie";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+section#producto{
+    grid-area: producto;
 }
 
 .img__procto{
