@@ -128,10 +128,26 @@ section#pie{
 }
 
 .productos__img{
-    width: 15rem;
-    height: 15rem;
+    width: 14rem;
+    height: 16rem;
 }
 
+/* transform*/
+.element {
+    width: 14rem;
+    height: 16rem;
+    position: absolute;
+    transform: translate(0px, 0px);
+    background-color:white;
+    transition: transform 1s ease-out;
+    text-align: center;
+  }
+  
+.element:hover {
+    transform: translate(0px, -250px);
+  }
+
+  /*consejos*/
 .consejos_grid{
 display: grid;
 grid-template-columns: 50%;
