@@ -4,9 +4,54 @@
     box-sizing: border-box;
 }
 
+$estilos:(
+    color1:#ffffff,
+    color2:#000000,
+);
+
+.card{
+    width: 14rem;
+    height: 16rem;
+    text-align: center;
+}
+@mixin grid-areas {
+    #ofertas{
+        grid-area: ofertas;
+
+    }        
+    #productos{
+            grid-area: productos;
+        }    
+    #consejos{
+            grid-area: consejos;
+        }
+    #pie{
+            grid-area: pie;
+        }
+    #contacto{
+            grid-area: contacto;
+        }
+    #campos{
+            grid-area: campos;
+        }
+    #login{
+    grid-area: login;
+        }
+    #producto{
+            grid-area: producto;
+        }
+    
+
+}
+@mixin flex-cente {
+    display: flex;
+    justify-content: center;
+}
+
+
 body{
     font-family: sans-serif;
-    background-color: white;
+    background-color: map-get($estilos,color1 );
     display: grid;
     grid-template-areas: 
     "header"
@@ -19,7 +64,7 @@ body{
     grid-template-rows: auto;
 
         a{
-            color: white;
+            color: map-get($estilos,color1 );
         }
         
         img{
@@ -36,18 +81,7 @@ body{
             grid-area: nav;
         }
         section{
-                #ofertas{
-                grid-area: ofertas;
-                #productos{
-                    grid-area: productos;
-                }
-                #consejos{
-                    grid-area: consejos;
-                }
-                #pie{
-                    grid-area: pie;
-                }
-            }
+            @include grid-areas();
         }
 
         .productos__grid{
@@ -72,7 +106,7 @@ body{
         }
 
         .nav__box{
-            background-color : black;
+            background-color : map-get($map: $estilos, $key:color2 );
             position: sticky;
             top: 0;
             z-index: 1;
@@ -111,7 +145,7 @@ body{
 
         .nav__item{
             margin: 0.5rem;
-            color: black;
+            color: map-get($map: $estilos, $key:color2 );
         }
 
         .display{
@@ -123,19 +157,16 @@ body{
         }
 
         .productos__img{
-            width: 14rem;
-            height: 16rem;
+            @extend .card;
         }
 
         /* transform*/
         .element {
-            width: 14rem;
-            height: 16rem;
+            @extend .card;
             position: absolute;
             transform: translate(0px, 0px);
-            background-color:white;
-            transition: transform 1s ease-out;
-            text-align: center;        
+            background-color:map-get($map: $estilos, $key:color1 );
+            transition: transform 1s ease-out;      
                 &:hover {
                     transform: translate(0px, -250px);
                     }
@@ -154,8 +185,8 @@ body{
         /*pie de pagina*/
 
         .pieDePagina{
-            background-color: black;
-            color: whitesmoke;
+            background-color: map-get($map: $estilos, $key:color2 );
+            color: map-get($map: $estilos, $key:color1 );
         }
 
         .fieldset{
@@ -164,7 +195,7 @@ body{
 
         .border{
             border: solid 2px;
-            border-color: black;
+            border-color:map-get($map: $estilos, $key:color2 );
 
         }
 }
@@ -182,8 +213,8 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
-section#contacto{
-    grid-area: contacto;
+section{
+   @include grid-areas();
 }
 .contacto{
     display: flex;
@@ -215,12 +246,11 @@ section#contacto{
     grid-template-columns:1fr;
     grid-template-rows: auto;
 }
-section#login{
-    grid-area: login;
+
+section{
+        @include grid-areas();
 }
-section#campos{
-    grid-area: campos;
-}
+
 .campos{
     display: grid;
     grid-template-columns: auto;
@@ -247,10 +277,9 @@ section#campos{
     grid-template-rows: auto;
 }
 
-section#producto{
-    grid-area: producto;
+section{
+    @include grid-areas();
 }
-
 .img__procto{
     max-width: 100%;
     height: 500px;
@@ -269,9 +298,11 @@ section#producto{
 
 }
 
-.producto{
+.producto {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
     align-items: center;
 }
+/* mixin de areas */
+@include grid-areas();

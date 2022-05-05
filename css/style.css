@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
+.card, body .element, body .productos__img {
+  width: 14rem;
+  height: 16rem;
+  text-align: center;
+}
+
 body {
   font-family: sans-serif;
-  background-color: white;
+  background-color: #ffffff;
   display: grid;
   grid-template-areas: "header" "nav" "ofertas " "productos" "consejos" "pie";
   grid-template-columns: auto;
@@ -16,7 +22,7 @@ body {
   /*pie de pagina*/
 }
 body a {
-  color: white;
+  color: #ffffff;
 }
 body img {
   max-width: 100%;
@@ -33,14 +39,26 @@ body .nav {
 body section #ofertas {
   grid-area: ofertas;
 }
-body section #ofertas #productos {
+body section #productos {
   grid-area: productos;
 }
-body section #ofertas #consejos {
+body section #consejos {
   grid-area: consejos;
 }
-body section #ofertas #pie {
+body section #pie {
   grid-area: pie;
+}
+body section #contacto {
+  grid-area: contacto;
+}
+body section #campos {
+  grid-area: campos;
+}
+body section #login {
+  grid-area: login;
+}
+body section #producto {
+  grid-area: producto;
 }
 body .productos__grid {
   display: grid;
@@ -60,7 +78,7 @@ body .container {
   padding-bottom: 2%;
 }
 body .nav__box {
-  background-color: black;
+  background-color: #000000;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -92,7 +110,7 @@ body .nav__list {
 }
 body .nav__item {
   margin: 0.5rem;
-  color: black;
+  color: #000000;
 }
 body .display {
   size: 8rem;
@@ -100,18 +118,11 @@ body .display {
 body .col {
   width: 100%;
 }
-body .productos__img {
-  width: 14rem;
-  height: 16rem;
-}
 body .element {
-  width: 14rem;
-  height: 16rem;
   position: absolute;
   transform: translate(0px, 0px);
-  background-color: white;
+  background-color: #ffffff;
   transition: transform 1s ease-out;
-  text-align: center;
 }
 body .element:hover {
   transform: translate(0px, -250px);
@@ -123,15 +134,15 @@ body .consejos_grid {
   max-width: 100%;
 }
 body .pieDePagina {
-  background-color: black;
-  color: whitesmoke;
+  background-color: #000000;
+  color: #ffffff;
 }
 body .fieldset {
   list-style: none;
 }
 body .border {
   border: solid 2px;
-  border-color: black;
+  border-color: #000000;
 }
 
 /*contactos*/
@@ -142,8 +153,29 @@ body .border {
   grid-template-rows: auto;
 }
 
-section#contacto {
+section #ofertas {
+  grid-area: ofertas;
+}
+section #productos {
+  grid-area: productos;
+}
+section #consejos {
+  grid-area: consejos;
+}
+section #pie {
+  grid-area: pie;
+}
+section #contacto {
   grid-area: contacto;
+}
+section #campos {
+  grid-area: campos;
+}
+section #login {
+  grid-area: login;
+}
+section #producto {
+  grid-area: producto;
 }
 
 .contacto {
@@ -172,12 +204,29 @@ section#contacto {
   grid-template-rows: auto;
 }
 
-section#login {
+section #ofertas {
+  grid-area: ofertas;
+}
+section #productos {
+  grid-area: productos;
+}
+section #consejos {
+  grid-area: consejos;
+}
+section #pie {
+  grid-area: pie;
+}
+section #contacto {
+  grid-area: contacto;
+}
+section #campos {
+  grid-area: campos;
+}
+section #login {
   grid-area: login;
 }
-
-section#campos {
-  grid-area: campos;
+section #producto {
+  grid-area: producto;
 }
 
 .campos {
@@ -202,7 +251,28 @@ section#campos {
   grid-template-rows: auto;
 }
 
-section#producto {
+section #ofertas {
+  grid-area: ofertas;
+}
+section #productos {
+  grid-area: productos;
+}
+section #consejos {
+  grid-area: consejos;
+}
+section #pie {
+  grid-area: pie;
+}
+section #contacto {
+  grid-area: contacto;
+}
+section #campos {
+  grid-area: campos;
+}
+section #login {
+  grid-area: login;
+}
+section #producto {
   grid-area: producto;
 }
 
@@ -227,6 +297,39 @@ section#producto {
   grid-template-columns: 50% 50%;
   justify-items: center;
   align-items: center;
+}
+
+/* mixin de areas */
+#ofertas {
+  grid-area: ofertas;
+}
+
+#productos {
+  grid-area: productos;
+}
+
+#consejos {
+  grid-area: consejos;
+}
+
+#pie {
+  grid-area: pie;
+}
+
+#contacto {
+  grid-area: contacto;
+}
+
+#campos {
+  grid-area: campos;
+}
+
+#login {
+  grid-area: login;
+}
+
+#producto {
+  grid-area: producto;
 }
 
 /*# sourceMappingURL=style.css.map */
